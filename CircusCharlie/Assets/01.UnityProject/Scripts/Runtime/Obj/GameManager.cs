@@ -16,6 +16,7 @@ public class GameManager : GSingleton<GameManager>
     public static event GetScoreHandler GetScore;
 
     public int score = 0;
+    private int savedScore = 0;
 
     private void OnEnable()
     {
@@ -23,6 +24,7 @@ public class GameManager : GSingleton<GameManager>
     }
     public void Clear()
     {
+        savedScore = score;
         GameClear();
     }
 
@@ -33,6 +35,14 @@ public class GameManager : GSingleton<GameManager>
 
     public void GameRestart()
     {
+        if(GFunc.GetActiveScene().name == "02.Stage1Scene")
+        {
+            score = 0;
+        }
+        else if(GFunc.GetActiveScene().name == "03.Stage2Scene")
+        {
+            score = savedScore;
+        }
         GFunc.LoadScene(GFunc.GetActiveScene().name);
     }
 

@@ -10,7 +10,8 @@ public class MoveCamera : MonoBehaviour
 
     void Update()
     {
-        cameraPosX = Mathf.Clamp(player.GetComponentMust<RectTransform>().anchoredPosition.x + 350, 0, 14690);
-        gameObject.GetComponentMust<RectTransform>().anchoredPosition = new Vector2(cameraPosX, 0);
+        cameraPosX = Mathf.Clamp(player.GetRect().anchoredPosition.x + 350, 0, 14690);
+        gameObject.GetRect().anchoredPosition = new Vector2(cameraPosX, Camera.main.gameObject.
+            GetRect().anchoredPosition.y);
     }
 }

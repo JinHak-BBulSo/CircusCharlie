@@ -10,17 +10,18 @@ public class PlayerController : MonoBehaviour
     public static Action<string> AnimationHandler;
 
     private float speed = 4f;
-    private float jumpForce = 7.5f;
+    private float jumpForce = 8f;
 
     private Rigidbody2D playerRigid = default;
     private Animator playerAni = default;
+    private AudioSource playerAudio = default;
 
     public bool isGrounded = true;
     private bool isJump = false;
     private bool isDie = false;
     private bool isHit = false;
 
-    private GameObject GameOverTxt = default;
+    private GameObject GameOverObjs = default;
 
     private int hp = 3;
     public int Hp
@@ -34,11 +35,19 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        playerAni = gameObject.FindChildObj("Player").GetComponentMust<Animator>();
-        playerRigid = GetComponent<Rigidbody2D>();
+        if (gameObject.name != "Player")
+        {
+            playerAni = gameObject.FindChildObj("Player").GetComponentMust<Animator>();   
+        }
+        else
+        {
+            playerAni = gameObject.GetComponentMust<Animator>();
+        }
 
-        GameOverTxt = GFunc.GetRootObj("UiObjs").FindChildObj("GameOverTxt");
-        GameOverTxt.SetActive(false);
+        playerRigid = GetComponent<Rigidbody2D>();
+        GameOverObjs = GFunc.GetRootObj("UiObjs").FindChildObj("GameOverObjs");
+        playerAudio = GetComponent<AudioSource>();
+        GameOverObjs.SetActive(false);
     }
 
     private void OnEnable()
@@ -58,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(0) && isDie)
+        if (Input.GetMouseButtonDown(0) && isDie)
         {
             GameManager.Instance.GameRestart();
         }
@@ -94,6 +103,7 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
             isJump = true;
             playerRigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            playerAudio.Play();
         }
     }
 
@@ -138,7 +148,7 @@ public class PlayerController : MonoBehaviour
     {
         isDie = true;
         playerRigid.velocity = Vector2.zero;
-        GameOverTxt.SetActive(true);
+        GameOverObjs.SetActive(true);
         playerAni.SetTrigger("Die");
 
         if (AnimationHandler != default)
@@ -166,9 +176,16 @@ public class PlayerController : MonoBehaviour
             GameManager.Instance.score += 100;
             GameManager.Instance.Score();
         }
-        else if(collision.tag == "Goal" && gameObject != null)
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Goal" && gameObject != null)
         {
             GameManager.Instance.Clear();
+        }
+        else if (collision.gameObject.tag == "Ground")
+        {
+            Ground();
         }
     }
 }
