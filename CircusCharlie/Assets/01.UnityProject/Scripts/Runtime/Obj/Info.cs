@@ -16,6 +16,9 @@ public class Info : MonoBehaviour
     {
         GameManager.GetScore -= UpdateScore;
         GameManager.GetScore += UpdateScore;
+
+        GameManager.GameClear -= GetBonus;
+        GameManager.GameClear += GetBonus;
     }
     void Start()
     {
@@ -47,5 +50,13 @@ public class Info : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         bonusDecLoof = false;
         bonus -= 10;
+    }
+
+    public void GetBonus()
+    {
+        GameManager.Instance.score += bonus;
+        bonus = 0;
+        UpdateBonus();
+        GameManager.GameClear -= GetBonus;
     }
 }

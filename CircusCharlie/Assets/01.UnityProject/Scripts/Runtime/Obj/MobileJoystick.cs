@@ -10,7 +10,7 @@ public class MobileJoystick : MonoBehaviour, IEndDragHandler, IDragHandler
     public static event playerMoveHandler OnPlayerMove;
     public static float joystickPosX = 0;
 
-    private const float JOYSTICK_RANGE = 102;
+    private const float JOYSTICK_RANGE = 120;
     [SerializeField]
     Canvas canvas = default;
     [SerializeField]

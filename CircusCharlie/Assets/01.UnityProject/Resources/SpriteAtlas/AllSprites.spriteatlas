@@ -27,7 +27,7 @@ SpriteAtlas:
       blockOffset: 1
       allowAlphaSplitting: 0
       enableRotation: 1
-      enableTightPacking: 1
+      enableTightPacking: 0
       enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
@@ -57,8 +57,52 @@ SpriteAtlas:
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites: []
-  m_PackedSpriteNamesToIndex: []
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 0dd498d12a7ad654eb7cf735bcdf09d4, type: 3}
+  - {fileID: -924513821, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: -1216083622, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: 1428684791, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: -980702118, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: -2009593974, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: 1170271247, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: -621221150, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: -1636755303, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: -949403738, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: -342521797, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: 485955014, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: -130709944, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: 1471964224, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: 222760959, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: 583801401, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: 1390771712, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: -2116550806, guid: b70d2c25ebe59834eadd4cd454857b11, type: 3}
+  - {fileID: 21300000, guid: c4e2123aca855c547899d4e1cbd4312b, type: 3}
+  - {fileID: 21300000, guid: 561ce56b57e34e6499fda3c9e96b3559, type: 3}
+  - {fileID: 21300000, guid: ed4fcc8bd53776d4282b31197f56547d, type: 3}
+  - {fileID: 21300000, guid: 4f5785eee0fe4c0458e9a2b2394a1d2d, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - lever
+  - SpriteSheet_39
+  - SpriteSheet_38
+  - SpriteSheet_31
+  - SpriteSheet_30
+  - SpriteSheet_33
+  - SpriteSheet_32
+  - SpriteSheet_62
+  - SpriteSheet_44
+  - SpriteSheet_59
+  - SpriteSheet_40
+  - SpriteSheet_41
+  - SpriteSheet_42
+  - SpriteSheet_43
+  - SpriteSheet_53
+  - SpriteSheet_52
+  - SpriteSheet_51
+  - SpriteSheet_50
+  - Free Flat Button Solid Circle Icon
+  - Free Flat Gear 1 Icon
+  - Meter
+  - base
   m_RenderDataMap: {}
   m_Tag: AllSprites
   m_IsVariant: 0

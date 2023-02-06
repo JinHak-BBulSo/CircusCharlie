@@ -121,6 +121,8 @@ public class PlayerController : MonoBehaviour
         GameManager.GameOver -= Die;
         GameManager.GameClear -= Clear;
         MobileJoystick.OnPlayerMove -= Move;
+
+        StartCoroutine(GoNextStage());
     }
 
     void Hit()
@@ -157,6 +159,19 @@ public class PlayerController : MonoBehaviour
         GameManager.GameOver -= Die;
         GameManager.GameClear -= Clear;
         MobileJoystick.OnPlayerMove -= Move;
+    }
+
+    IEnumerator GoNextStage()
+    {
+        yield return new WaitForSeconds(3f);
+        if(GFunc.GetActiveScene().name == "02.Stage1Scene")
+        {
+            GFunc.LoadScene("03.Stage2Scene");
+        }
+        else
+        {
+            GFunc.LoadScene("01.TitleScene");
+        }
     }
 
     IEnumerator HitDelay()

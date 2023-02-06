@@ -11,7 +11,6 @@ public class PopupButton : MonoBehaviour
     {
         exitBtn = gameObject.FindChildObj("ExitBtn");
         exitBtn.SetActive(false);
-        DontDestroyOnLoad(this);
     }
 
     public void OnClickPopupBtn()
