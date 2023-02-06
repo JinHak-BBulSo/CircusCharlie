@@ -483,7 +483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1266714889277125313, guid: 32e4c76e0867bcf439da15919159fe41, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 230
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 1266714889277125313, guid: 32e4c76e0867bcf439da15919159fe41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -519,7 +519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1266714889277125313, guid: 32e4c76e0867bcf439da15919159fe41, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 280
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 1266714889277125313, guid: 32e4c76e0867bcf439da15919159fe41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1676,24 +1676,24 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 766192819}
     m_ColliderPaths:
-    - - X: 3645833
-        Y: 3645833
-      - X: -3645833
-        Y: 3645833
-      - X: -3645833
-        Y: -3645833
-      - X: 3645833
-        Y: -3645833
+    - - X: 5772570
+        Y: 5772570
+      - X: -5772570
+        Y: 5772570
+      - X: -5772570
+        Y: -5772570
+      - X: 5772570
+        Y: -5772570
   - m_Collider: {fileID: 681736804}
     m_ColliderPaths:
-    - - X: 4812500
-        Y: -3770833
-      - X: -4812500
-        Y: -3770833
-      - X: -4812500
-        Y: -8729167
-      - X: 4812500
-        Y: -8729167
+    - - X: 7619792
+        Y: -5970485
+      - X: -7619792
+        Y: -5970485
+      - X: -7619792
+        Y: -13821180
+      - X: 7619792
+        Y: -13821180
   m_CompositePaths:
     m_Paths:
     - - {x: 0.5772277, y: -0.577257}
