@@ -56,6 +56,7 @@ public class Info : MonoBehaviour
     {
         GameManager.Instance.score += bonus;
         bonus = 0;
+        StopAllCoroutines();
         UpdateBonus();
         GameManager.GameClear -= GetBonus;
     }
